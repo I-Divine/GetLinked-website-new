@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/nav-button.css" />
     <!-- Montserrat-font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,17 +22,38 @@
   <body>
     <header>
       <h1>get<span>linked</span></h1>
-      <nav class="navbar">
-        <ul>
-          <li><a href="">Timelines</a></li>
-          <li><a href="">Overview</a></li>
-          <li><a href="">FAQs</a></li>
-          <li><a href="./pages/contact.html">Contact</a></li>
-          <li class="register-item">
-            <a href="./pages/register.html"><button>Register</button></a>
-          </li>
-        </ul>
-      </nav>
+      <label for="nav-check" class="nav-check">
+        <input type="checkbox" id="nav-check" />
+        <div class="nav-btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <nav class="mobile-navbar">
+          <ul class="mobile-navlist">
+            <li><a href="">Timelines</a></li>
+            <li><a href="">Overview</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+            <li class="register-item">
+              <a href="./pages/register.html"><button>Register</button></a>
+            </li>
+          </ul>
+        </nav>
+      </label>
+      <div class="nav-container">
+        <nav class="navbar">
+          <ul>
+            <li><a href="">Timelines</a></li>
+            <li><a href="">Overview</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+            <li class="register-item">
+              <a href="./pages/register.html"><button>Register</button></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!-- <hr /> -->
   </body>
