@@ -16,12 +16,24 @@ html {
   line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
+  overflow-x: hidden;
 }
 
 body {
-  padding: 5% 10%;
+  overflow-x: hidden;
+
+  padding: 2.5rem 0%;
   background-color: var(--bg-color);
   color: var(--main-font-color);
+}
+header,
+section {
+  padding: 0% 7%;
+}
+hr {
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
 }
 h1,
 h1 span {
@@ -36,9 +48,13 @@ header {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   align-items: baseline;
+  margin-bottom: 20px;
 }
 header h1 span {
   color: var(--secondary-font-color);
+}
+nav.navbar ul > * {
+  flex-shrink: 1;
 }
 nav.navbar ul {
   display: flex;
@@ -113,6 +129,57 @@ nav.navbar a:hover {
 .nav-container {
   visibility: hidden;
 }
+.intro .flex-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.intro .flex-div > div {
+  flex-basis: 50%;
+}
+.intro .flex-div img {
+  /* width: 30rem;   */
+  /* position: absolute; */
+  width: 50%;
+  max-width: 700px;
+  bottom: 0px;
+  padding: 0px;
+}
+.intro .caption {
+  text-align: right;
+  margin: 1em;
+}
+.intro p {
+  margin-top: 0.25rem;
+}
+.intro .big-text {
+  font-family: Clash Display, sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.intro p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.intro button {
+  font-size: 2em;
+  margin-top: 50px;
+  padding: 0.5em 1em;
+}
+.intro .img-container {
+  position: relative;
+}
+.intro .intro-text > :first-child {
+  margin-top: 100px;
+}
+
 @media screen and (width >= 700px) {
   .nav-check {
     display: none;
