@@ -129,18 +129,16 @@ nav.navbar a:hover {
 .nav-container {
   visibility: hidden;
 }
-.intro .flex-div {
+.flex-div {
   display: flex;
+  gap: 5rem;
   flex-wrap: wrap;
 }
-.intro .flex-div > div {
+.flex-div > * {
   flex-basis: 50%;
 }
-.intro .flex-div img {
-  /* width: 30rem;   */
-  /* position: absolute; */
-  width: 50%;
-  max-width: 700px;
+.flex-div img {
+  max-width: 40%;
   bottom: 0px;
   padding: 0px;
 }
@@ -167,6 +165,9 @@ nav.navbar a:hover {
   letter-spacing: 0em;
   text-align: left;
 }
+img {
+  object-fit: contain;
+}
 
 .intro button {
   font-size: 2em;
@@ -179,8 +180,14 @@ nav.navbar a:hover {
 .intro .intro-text > :first-child {
   margin-top: 100px;
 }
-
-@media screen and (width >= 700px) {
+.flex-div article {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section {
+  margin-bottom: 50px;
+}
+@media screen and (width >= 1000px) {
   .nav-check {
     display: none;
   }
