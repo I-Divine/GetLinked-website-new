@@ -9,6 +9,9 @@
 
   box-sizing: border-box;
 }
+.with-purple {
+  color: var(--tertiary-font-color);
+}
 html {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -168,7 +171,9 @@ nav.navbar a:hover {
 img {
   object-fit: contain;
 }
-
+h2 {
+  margin-bottom: 10px;
+}
 .intro button {
   font-size: 2em;
   margin-top: 50px;
