@@ -5,16 +5,16 @@ const Navlinks = () => {
     <nav>
       <ul className="nav-container font-medium desktop">
         <li>
-          <a href="">Timelines</a>
+          <a href="#">Timelines</a>
         </li>
         <li>
-          <a href="">Overview</a>
+          <a href="#">Overview</a>
         </li>
         <li>
-          <a href="">FAQs</a>
+          <a href="#">FAQs</a>
         </li>
         <li>
-          <a href="">Contact</a>
+          <a href="#">Contact</a>
         </li>
         <li>
           <RegisterBtn />

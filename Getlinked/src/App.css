@@ -45,22 +45,14 @@ body {
   background-color: var(--bg-color);
   color: var(--main-font-color);
 }
-.register {
-  display: block;
-  padding: 10px 15px;
-  color: var(--main-font-color);
-  background-image: linear-gradient(
-    to right,
-    var(--secondary-font-color),
-    var(--tertiary-font-color)
-  );
-}
+
 .navbar {
   display: flex;
-  padding: 10px 5%;
-  justify-content: space-between;
-  margin-bottom: 20px;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  margin-bottom: 20px;
 }
 .nav-container {
   display: flex;
@@ -78,6 +70,26 @@ body {
 .mobile-navlist a {
   text-decoration: none;
   color: var(--main-font-color);
+}
+.nav-container a:hover,
+.mobile-navlist a:hover {
+  color: var(--tertiary-font-color);
+}
+
+.nav-container .register:hover,
+.mobile-navbar .register:hover {
+  color: var(--main-font-color);
+}
+.register {
+  display: block;
+  width: fit-content;
+  padding: 10px 15px;
+  color: var(--main-font-color);
+  background-image: linear-gradient(
+    to right,
+    var(--secondary-font-color),
+    var(--tertiary-font-color)
+  );
 }
 .mobile-navbar {
   position: absolute;
