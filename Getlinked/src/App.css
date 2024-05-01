@@ -1,6 +1,6 @@
-* {
-  padding: 0;
-  margin: 0;
+:root {
+  padding: 0rem;
+  margin: 0rem;
 
   --bg-color: #150e28;
   --main-font-color: #fff;
@@ -8,9 +8,13 @@
   --tertiary-font-color: #d434fe;
 
   box-sizing: border-box;
+  font-size: 16px;
 }
-.with-purple {
+.accent-1 {
   color: var(--tertiary-font-color);
+}
+.accent-2 {
+  color: var(--secondary-font-color);
 }
 html {
   font-family: "Montserrat", sans-serif;
@@ -21,7 +25,21 @@ html {
   text-align: left;
   overflow-x: hidden;
 }
-
+.underlined {
+  position: relative;
+  margin-right: 1rem;
+}
+.underlined:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  height: 7px;
+  width: 100%;
+  border: solid 8px var(--tertiary-font-color);
+  border-color: var(--tertiary-font-color) transparent transparent transparent;
+  border-radius: 50%;
+}
 .font-smaller {
   font-size: 0.75rem;
 }
@@ -37,11 +55,12 @@ html {
 .font-larger {
   font-size: 1.75rem;
 }
-
+.italic {
+  font-style: italic;
+}
 body {
   overflow-x: hidden;
 
-  padding: 2.5rem 0%;
   background-color: var(--bg-color);
   color: var(--main-font-color);
 }
@@ -77,13 +96,16 @@ body {
 }
 
 .nav-container .register:hover,
-.mobile-navbar .register:hover {
+.mobile-navbar .register:hover,
+.register:hover {
   color: var(--main-font-color);
+  cursor: pointer;
 }
 .register {
   display: block;
   width: fit-content;
-  padding: 10px 15px;
+  padding: 0.5em 1em;
+  border-radius: 0.125rem;
   color: var(--main-font-color);
   background-image: linear-gradient(
     to right,
@@ -91,6 +113,7 @@ body {
     var(--tertiary-font-color)
   );
 }
+
 .mobile-navbar {
   position: absolute;
   top: 0;
@@ -106,14 +129,63 @@ body {
   align-items: center;
   justify-content: center;
 }
+.section-pad {
+  padding: 1rem;
+}
+.big-heading {
+  font-family: Clash Display;
+  font-size: 5rem;
+  font-weight: 700;
+  /* line-height: 2rem; */
+  text-align: left;
+  display: block;
+}
+.heading {
+  font-family: Clash Display;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: -2.66rem;
+  text-align: left;
+}
+.paragraph {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: -33.2px;
+  text-align: left;
+}
+
 .mobile-navbar li {
   margin-bottom: 15px;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+.align-end {
+  align-self: end;
+}
+.align-start {
+  align-self: start;
+}
+.align-right {
+  text-align: right;
+}
+.hero .img-container img {
+  width: 100%;
+}
+
 @media screen and (width >= 1000px) {
   .nav-check {
     display: none;
   }
   .nav-container {
     visibility: visible;
+  }
+}
+@media screen and (width <= 1000px) {
+  .hero .grid-container {
+    display: block;
   }
 }

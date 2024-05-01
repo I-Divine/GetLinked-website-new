@@ -1,5 +1,5 @@
 const RegisterBtn = ({ size }) => {
-  return <a className="register">Register</a>;
+  return <a className={`register ${size}`}>Register</a>;
 };
 
 export default RegisterBtn;

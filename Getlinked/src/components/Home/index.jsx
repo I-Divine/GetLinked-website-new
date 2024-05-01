@@ -1,11 +1,15 @@
-import MainComponent from "./Main";
+import HeroSection from "./Hero";
 import Navbar from "../Navbar";
 const Home = () => {
   return (
     <>
-      <Navbar />
+      <header>
+        <Navbar />
+      </header>
       <hr />
-      <MainComponent />
+      <main>
+        <HeroSection />
+      </main>
     </>
   );
 };
