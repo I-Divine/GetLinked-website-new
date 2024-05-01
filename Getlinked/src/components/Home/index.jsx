@@ -1,5 +1,6 @@
 import HeroSection from "./Hero";
 import Navbar from "../Navbar";
+import IntroSection from "./Intro";
 const Home = () => {
   return (
     <>
@@ -9,6 +10,7 @@ const Home = () => {
       <hr />
       <main>
         <HeroSection />
+        <IntroSection />
       </main>
     </>
   );

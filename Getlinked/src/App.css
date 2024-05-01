@@ -9,6 +9,12 @@
 
   box-sizing: border-box;
   font-size: 16px;
+
+  --fs-small: 1rem;
+  --fs-medium: 1.25rem;
+  --fs-large: 1.5rem;
+  --fs-larger: 2rem;
+  --fs-xlarge: 4.5rem;
 }
 .accent-1 {
   color: var(--tertiary-font-color);
@@ -79,7 +85,7 @@ body {
   gap: 1rem;
 }
 .desktop {
-  visibility: hidden;
+  display: none;
 }
 .nav-container li,
 .mobile-navlist li {
@@ -121,7 +127,6 @@ body {
   background-color: var(--bg-color);
   border: 1px solid #fff;
   border-radius: 5px;
-  /* width: 70%; */
   padding: 50px;
   min-width: 290px;
   height: 500px;
@@ -130,28 +135,27 @@ body {
   justify-content: center;
 }
 .section-pad {
-  padding: 1rem;
+  padding: 2rem;
 }
 .big-heading {
   font-family: Clash Display;
-  font-size: 5rem;
+  font-size: var(--fs-xlarge);
   font-weight: 700;
-  /* line-height: 2rem; */
   text-align: left;
   display: block;
 }
 .heading {
   font-family: Clash Display;
-  font-size: 2rem;
+  font-size: var(--fs-larger);
   font-weight: 700;
-  line-height: -2.66rem;
+  line-height: 0rem;
   text-align: left;
 }
 .paragraph {
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: var(--fs-medium);
   font-weight: 400;
-  line-height: -33.2px;
+  line-height: -2.075rem;
   text-align: left;
 }
 
@@ -172,20 +176,42 @@ body {
 .align-right {
   text-align: right;
 }
-.hero .img-container img {
-  width: 100%;
+.img-container img {
+  width: 90%;
 }
-
+.Typewriter {
+  display: inline;
+}
 @media screen and (width >= 1000px) {
   .nav-check {
     display: none;
   }
-  .nav-container {
-    visibility: visible;
+  .desktop {
+    display: flex;
   }
 }
 @media screen and (width <= 1000px) {
   .hero .grid-container {
     display: block;
+  }
+  .intro.grid-container {
+    grid-template-columns: unset;
+  }
+
+  :root {
+    --fs-small: 0.85rem;
+    --fs-medium: 1rem;
+    --fs-large: 1.25rem;
+    --fs-larger: 1.75rem;
+    --fs-xlarge: 4rem;
+  }
+}
+@media screen and (width <= 500px) {
+  :root {
+    --fs-small: 0.75rem;
+    --fs-medium: 0.95rem;
+    --fs-large: 1rem;
+    --fs-larger: 1.25rem;
+    --fs-xlarge: 1.5rem;
   }
 }

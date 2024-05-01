@@ -1,15 +1,28 @@
 import React from "react";
+import Typewriter from "typewriter-effect";
+
 import RegisterBtn from "../RegisterBtn";
 const HeroSection = ({}) => {
   return (
     <section className="hero section-pad">
       <h4 className="align-right heading italic">
-        Igniting a Revolution in{" "}
-        <span className="underlined">HR Innovation</span>
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter
+              .typeString("Streamlining Recruitment")
+              .pauseFor(500)
+              .deleteAll()
+              .typeString("Unlocking Opportunities")
+              .pauseFor(500)
+              .deleteAll()
+              .typeString("Igniting a Revolution in HR Innovation")
+              .start();
+          }}
+        />
       </h4>
       <div
         className="grid-container "
-        style={{ gridTemplateColumns: "60% 40%" }}
+        style={{ gridTemplateColumns: "50% 50%" }}
       >
         <div>
           <p className="big-heading">getlinked Tech</p>
@@ -18,7 +31,7 @@ const HeroSection = ({}) => {
           </p>
           <p className="paragraph">
             Participate in getlinked tech Hackathon 2023 stand a chance to win a
-            Big prize
+            Big prize.
           </p>
 
           <RegisterBtn size={"font-larger"} />
