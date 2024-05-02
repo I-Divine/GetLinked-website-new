@@ -15,6 +15,9 @@
   --fs-large: 1.5rem;
   --fs-larger: 2rem;
   --fs-xlarge: 4.5rem;
+
+  --heading-line-height: 0rem;
+  --paragraph-line-height: 1.5rem;
 }
 .accent-1 {
   color: var(--tertiary-font-color);
@@ -22,11 +25,13 @@
 .accent-2 {
   color: var(--secondary-font-color);
 }
+hr {
+  border-top: none;
+  border-bottom: 1px #ffffff76 solid;
+}
 html {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
   overflow-x: hidden;
@@ -35,7 +40,7 @@ html {
   position: relative;
   margin-right: 1rem;
 }
-.underlined:after {
+.underined:after {
   content: "";
   position: absolute;
   bottom: -20px;
@@ -141,6 +146,7 @@ body {
   font-family: Clash Display;
   font-size: var(--fs-xlarge);
   font-weight: 700;
+  line-height: var(--heading-line-height);
   text-align: left;
   display: block;
 }
@@ -148,14 +154,14 @@ body {
   font-family: Clash Display;
   font-size: var(--fs-larger);
   font-weight: 700;
-  line-height: 0rem;
+  line-height: var(--heading-line-height);
   text-align: left;
 }
 .paragraph {
   font-family: Montserrat;
   font-size: var(--fs-medium);
   font-weight: 400;
-  line-height: -2.075rem;
+  line-height: var(--paragraph-line-height);
   text-align: left;
 }
 
@@ -167,11 +173,20 @@ body {
   grid-template-columns: 50% 50%;
   gap: 1rem;
 }
+.place-left {
+  grid-row: 1;
+}
+.place-right {
+  grid-column: 2;
+}
 .align-end {
   align-self: end;
 }
 .align-start {
   align-self: start;
+}
+.align-center {
+  align-self: center;
 }
 .align-right {
   text-align: right;
@@ -194,10 +209,12 @@ body {
   .hero .grid-container {
     display: block;
   }
-  .intro.grid-container {
-    grid-template-columns: unset;
+  .grid-container {
+    display: block;
   }
-
+  .grid-container.img-container {
+    order: 2;
+  }
   :root {
     --fs-small: 0.85rem;
     --fs-medium: 1rem;
@@ -206,12 +223,13 @@ body {
     --fs-xlarge: 4rem;
   }
 }
-@media screen and (width <= 500px) {
+@media screen and (width <= 600px) {
   :root {
     --fs-small: 0.75rem;
     --fs-medium: 0.95rem;
     --fs-large: 1rem;
     --fs-larger: 1.25rem;
     --fs-xlarge: 1.5rem;
+    --heading-line-height: 1rem;
   }
 }
