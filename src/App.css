@@ -197,6 +197,18 @@ body {
 .Typewriter {
   display: inline;
 }
+.FAQS {
+  list-style: none;
+  padding: 0;
+}
+.FAQS li {
+  margin-top: 1rem;
+  border-bottom: 1px solid var(--tertiary-font-color);
+  padding-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
 @media screen and (width >= 1000px) {
   .nav-check {
     display: none;
@@ -215,6 +227,12 @@ body {
   .grid-container.img-container {
     order: 2;
   }
+  .paragraph,
+  .heading,
+  .big-heading,
+  .register {
+    text-align: center;
+  }
   :root {
     --fs-small: 0.85rem;
     --fs-medium: 1rem;
@@ -229,7 +247,11 @@ body {
     --fs-medium: 0.95rem;
     --fs-large: 1rem;
     --fs-larger: 1.25rem;
-    --fs-xlarge: 1.5rem;
+    --fs-xlarge: 2.5rem;
     --heading-line-height: 1rem;
+  }
+
+  .section-pad {
+    padding: 1rem;
   }
 }
