@@ -46,6 +46,7 @@ const FAQsSaection = () => {
           </p>
         </div>
       </section>
+      <hr />
     </>
   );
 };
