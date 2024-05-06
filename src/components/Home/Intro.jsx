@@ -2,6 +2,7 @@ const IntroSection = () => {
   return (
     <>
       <section
+        id="overview"
         className="intro grid-container section-pad"
         style={{ alignItems: "center" }}
       >

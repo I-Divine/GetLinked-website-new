@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom/cjs/react-router-dom";
 import RegisterBtn from "../RegisterBtn";
 import "./nav-button.css";
 const NavlinksMobile = () => {
@@ -13,16 +14,16 @@ const NavlinksMobile = () => {
         <nav class="mobile-navbar">
           <ul class="mobile-navlist font-large">
             <li>
-              <a href="">Timelines</a>
+              <a href="/#timeline">Timelines</a>
             </li>
             <li>
-              <a href="">Overview</a>
+              <a href="/#overview">Overview</a>
             </li>
             <li>
-              <a href="">FAQs</a>
+              <a href="/#FAQs">FAQs</a>
             </li>
             <li>
-              <a href="./pages/contact.html">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
 
             <RegisterBtn />

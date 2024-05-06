@@ -1,9 +1,14 @@
 const TimelineSection = () => {
   return (
     <>
-      <section className="section-pad">
-        <h2 className="heading">Timeline</h2>
-        <p className="fs-medium">
+      <section className="section-pad" id="timeline">
+        <h2 className="heading" style={{ textAlign: "center" }}>
+          Timeline
+        </h2>
+        <p
+          className="fs-medium"
+          style={{ textAlign: "center", marginBottom: "5rem" }}
+        >
           Here is the breakdown of the time we anticipate using for the upcoming
           event.
         </p>

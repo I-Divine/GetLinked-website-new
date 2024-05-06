@@ -12,9 +12,6 @@ import FooterSection from "./Footer";
 const Home = () => {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
       <hr />
       <main>
         <HeroSection />

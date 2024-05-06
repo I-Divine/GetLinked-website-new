@@ -1,20 +1,20 @@
 import RegisterBtn from "../RegisterBtn";
-
+import { Link } from "react-router-dom/cjs/react-router-dom";
 const Navlinks = () => {
   return (
     <nav>
       <ul className="nav-container font-medium desktop">
         <li>
-          <a href="#">Timelines</a>
+          <a href="/#timeline">Timelines</a>
         </li>
         <li>
-          <a href="#">Overview</a>
+          <a href="/#overview">Overview</a>
         </li>
         <li>
-          <a href="#">FAQs</a>
+          <a href="/#FAQs">FAQs</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
         <li>
           <RegisterBtn />

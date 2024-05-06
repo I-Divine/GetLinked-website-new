@@ -1,7 +1,7 @@
 const FAQsSaection = () => {
   return (
     <>
-      <section className="grid-container section-pad">
+      <section className="grid-container section-pad" id="FAQs">
         <div className="img-container">
           <img src="/images/man-on-cloud.png" alt="" />
         </div>
