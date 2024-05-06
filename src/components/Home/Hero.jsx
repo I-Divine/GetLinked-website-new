@@ -34,9 +34,9 @@ const HeroSection = ({}) => {
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize.
             </p>
-            <p>
+            <div className="register-container" style={{ textAlign: "center" }}>
               <RegisterBtn size={"font-larger"} />
-            </p>
+            </div>
           </div>
           <div className="img-container align-end">
             <img

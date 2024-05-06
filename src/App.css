@@ -10,6 +10,8 @@
   box-sizing: border-box;
   font-size: 16px;
 
+  --section-padding: 2rem;
+
   --fs-small: 1rem;
   --fs-medium: 1.25rem;
   --fs-large: 1.5rem;
@@ -28,12 +30,12 @@
 hr {
   border-top: none;
   border-bottom: 1px #ffffff76 solid;
+  margin: 0px;
 }
 html {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   letter-spacing: 0em;
-  text-align: left;
   overflow-x: hidden;
 }
 .underlined {
@@ -65,6 +67,15 @@ html {
 }
 .font-larger {
   font-size: 1.75rem;
+}
+.fw-medium {
+  font-weight: 400;
+}
+.fw-bold {
+  font-weight: 700;
+}
+.fw-bolder {
+  font-weight: 800;
 }
 .italic {
   font-style: italic;
@@ -140,7 +151,7 @@ body {
   justify-content: center;
 }
 .section-pad {
-  padding: 2rem;
+  padding: var(--section-padding);
 }
 .big-heading {
   font-family: Clash Display, sans-serif;
@@ -190,6 +201,9 @@ body {
 }
 .align-right {
   text-align: right;
+}
+.img-container {
+  margin-bottom: calc(1 - var(--section-padding));
 }
 .img-container img {
   width: 90%;
@@ -251,6 +265,44 @@ body {
 .timeline .heading {
   font-size: var(--fs-large);
 }
+.reward-content {
+  display: flex;
+  justify-content: end;
+}
+.reward-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.reward-images img {
+  width: 90%;
+}
+.premium-background {
+  background-image: url("/images/premium-photo.png");
+  background-size: cover;
+}
+.partners {
+  text-align: center;
+}
+.policy-container {
+  border: 0.25rem solid var(--tertiary-font-color);
+  border-radius: 0.75rem;
+  padding: 2rem;
+}
+.policy-container .heading {
+  font-size: var(--fs-medium);
+}
+.policy-container .paragraph,
+.policy-container li {
+  margin-bottom: 2rem;
+}
+.policy .img-container {
+  background-image: url("/images/Vector.png");
+  background-repeat: no-repeat;
+}
+.policy ul {
+  list-style-image: url("/images/list-terms.png");
+}
 @media screen and (width >= 1000px) {
   .nav-check {
     display: none;
@@ -271,9 +323,15 @@ body {
   }
   .paragraph,
   .heading,
-  .big-heading,
-  .register {
+  .big-heading {
     text-align: center;
+  }
+  .img-container {
+    margin-top: 5rem;
+    margin-bottom: -2rem;
+  }
+  .register {
+    margin: auto;
   }
   :root {
     --fs-small: 0.85rem;
@@ -315,6 +373,15 @@ body {
     grid-column: 2;
     transform: translateY(-1.5rem);
   }
+  .reward-content {
+    display: block;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .reward-images {
+    grid-template-columns: unset;
+  }
 }
 @media screen and (width <= 600px) {
   :root {
@@ -324,9 +391,6 @@ body {
     --fs-larger: 1.25rem;
     --fs-xlarge: 2.5rem;
     --heading-line-height: 1rem;
-  }
-
-  .section-pad {
-    padding: 1rem;
+    --section-padding: 1rem;
   }
 }

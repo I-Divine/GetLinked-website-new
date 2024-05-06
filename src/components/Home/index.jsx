@@ -5,6 +5,9 @@ import RulesSection from "./RulesAndGuidelines";
 import JudgingCriteriaSection from "./JudgingCriteria";
 import FAQsSaection from "./FAQs";
 import TimelineSection from "./Timeline";
+import RewardSection from "./Rewards";
+import PartnersSection from "./Partners";
+import PolicySection from "./Policy";
 const Home = () => {
   return (
     <>
@@ -19,6 +22,9 @@ const Home = () => {
         <JudgingCriteriaSection />
         <FAQsSaection />
         <TimelineSection />
+        <RewardSection />
+        <PartnersSection />
+        <PolicySection />
       </main>
     </>
   );
