@@ -206,7 +206,7 @@ body {
 .align-right {
   text-align: right;
 }
-.img-container {
+.hero .img-container {
   margin-bottom: calc(1 - var(--section-padding));
 }
 .img-container img {
@@ -347,10 +347,7 @@ footer {
   .big-heading {
     text-align: center;
   }
-  .img-container {
-    margin-top: 5rem;
-    margin-bottom: -2rem;
-  }
+
   .register,
   .read-more {
     margin: auto;
