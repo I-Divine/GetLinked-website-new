@@ -21,6 +21,9 @@ const PolicySection = () => {
               participating in our event, you consent to the practices described
               in this policy.
             </p>
+            <a href="#" className="read-more">
+              Read More
+            </a>
             <h3 className="heading">Licensing Policy</h3>
             <h3 className="heading accent-2">
               Here are terms of our Standard License:

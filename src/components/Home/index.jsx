@@ -8,6 +8,7 @@ import TimelineSection from "./Timeline";
 import RewardSection from "./Rewards";
 import PartnersSection from "./Partners";
 import PolicySection from "./Policy";
+import FooterSection from "./Footer";
 const Home = () => {
   return (
     <>
@@ -26,6 +27,7 @@ const Home = () => {
         <PartnersSection />
         <PolicySection />
       </main>
+      <FooterSection />
     </>
   );
 };
