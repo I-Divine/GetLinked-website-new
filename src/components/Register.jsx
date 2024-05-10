@@ -16,15 +16,26 @@ const RegisterForm = () => {
           <div className="form-grid">
             <label>
               Team's Name <br />
-              <input placeholder="Enter the name of your group" />
+              <input
+                autoComplete="on"
+                placeholder="Enter the name of your group"
+              />
             </label>
             <label>
               Phone <br />
-              <input placeholder="Enter your phone number" />
+              <input
+                type="tel"
+                autoComplete="on"
+                placeholder="Enter your phone number"
+              />
             </label>
             <label>
               Email <br />
-              <input placeholder="Enter your email address" />
+              <input
+                type="email"
+                autoComplete="on"
+                placeholder="Enter your email address"
+              />
             </label>
             <label>
               Project Topic <br />
