@@ -1,11 +1,15 @@
+import { useInView } from "react-intersection-observer";
 const JudgingCriteriaSection = () => {
+  const [ref, inView, entry] = useInView({
+    threshold: 0,
+  });
   return (
     <>
-      <section className="grid-container section-pad">
+      <section className="grid-container section-pad" ref={ref}>
         <div className="img-container" style={{ alignSelf: "center" }}>
           <img src="/images/judging-criteria.png" alt="" />
         </div>
-        <div>
+        <div className={`hidden ${inView ? "show" : ""}`}>
           <h2 className="heading">Judging Criteria</h2>
           <h2 className="heading">Key attributes</h2>
           <p className="paragraph">

@@ -1,15 +1,20 @@
+import { useInView } from "react-intersection-observer";
 const IntroSection = () => {
+  const [ref, inView, entry] = useInView({
+    threshold: 0,
+  });
   return (
     <>
       <section
         id="overview"
         className="intro grid-container section-pad"
         style={{ alignItems: "center" }}
+        ref={ref}
       >
         <div className="img-container">
           <img src="/images/the-big-idea.png" alt="" />
         </div>
-        <div>
+        <div className={`hidden ${inView ? "show" : ""}`}>
           <h2 className="heading">Introduction to getlinked </h2>
           <h2 className="heading accent-2">tech Hackathon 1.0</h2>
           <p className="paragraph">
