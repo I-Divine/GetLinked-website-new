@@ -1,12 +1,18 @@
+import { useInView } from "react-intersection-observer";
 const RulesSection = () => {
+  const [ref, inView, entry] = useInView({
+    threshold: 0,
+  });
   return (
     <>
       {" "}
-      <section className="grid-container section-pad">
+      <section className="grid-container section-pad" ref={ref}>
         <div className="img-container place-right">
           <img src="/images/lady-with-notebook.png" alt="" />
         </div>
-        <div className="place-left align-center">
+        <div
+          className={`place-left align-center hidden ${inView ? "show" : ""}`}
+        >
           <p className="heading">Rules and</p>
           <p className="heading accent-2">Guidelines</p>
 
