@@ -1,20 +1,18 @@
-import React from "react";
-import { useInView } from "react-intersection-observer";
+import React, { useEffect, useState } from "react";
+import { useIsShown } from "./useShown";
 import Typewriter from "typewriter-effect";
 
 import RegisterBtn from "../RegisterBtn";
 
 const HeroSection = ({}) => {
-  const [ref, inView, entry] = useInView({
-    threshold: 0,
-  });
-  console.log(inView);
+  const { isShown, ref } = useIsShown();
+
   return (
     <>
       <section className="hero section-pad" ref={ref}>
         <h4
           className={`align-right heading italic hidden ${
-            inView ? "show" : ""
+            isShown ? "show" : ""
           }`}
         >
           <Typewriter
@@ -35,8 +33,7 @@ const HeroSection = ({}) => {
           className="grid-container "
           style={{ gridTemplateColumns: "50% 50%" }}
         >
-          <div className={`hidden ${inView ? "show" : ""}`}>
-            {inView}
+          <div className={`hidden ${isShown ? "show" : ""}`}>
             <h2 className="big-heading">getlinked Tech</h2>
             <h2 className="big-heading ">
               Hackathon <span className="accent-1">1.0</span>

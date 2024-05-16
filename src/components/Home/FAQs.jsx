@@ -1,15 +1,14 @@
-import { useInView } from "react-intersection-observer";
+import { useIsShown } from "./useShown";
 const FAQsSaection = () => {
-  const [ref, inView, entry] = useInView({
-    threshold: 0,
-  });
+  const { isShown, ref } = useIsShown();
+
   return (
     <>
       <section className="grid-container section-pad" id="FAQs" ref={ref}>
-        <div className="img-container">
+        <div className="img-container place-right">
           <img src="/images/man-on-cloud.png" alt="" />
         </div>
-        <div className={`hidden ${inView ? "show" : ""}`}>
+        <div className={`place-left hidden ${isShown ? "show" : ""}`}>
           <h2 className="heading">Frequently Ask </h2>
           <h2 className="heading accent-2">Question</h2>
           <p className="paragraph">

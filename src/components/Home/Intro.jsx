@@ -1,8 +1,7 @@
-import { useInView } from "react-intersection-observer";
+import { useIsShown } from "./useShown";
 const IntroSection = () => {
-  const [ref, inView, entry] = useInView({
-    threshold: 0,
-  });
+  const { isShown, ref } = useIsShown();
+
   return (
     <>
       <section
@@ -14,7 +13,7 @@ const IntroSection = () => {
         <div className="img-container">
           <img src="/images/the-big-idea.png" alt="" />
         </div>
-        <div className={`hidden ${inView ? "show" : ""}`}>
+        <div className={`hidden ${isShown ? "show" : ""}`}>
           <h2 className="heading">Introduction to getlinked </h2>
           <h2 className="heading accent-2">tech Hackathon 1.0</h2>
           <p className="paragraph">

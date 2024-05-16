@@ -146,6 +146,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 10;
   background-color: var(--bg-color);
   border: 1px solid #fff;
   border-radius: 5px;
@@ -381,15 +382,20 @@ option {
 }
 .hidden {
   opacity: 0.01;
-  transition: all 1s;
+  transition: all 1s ease-out;
   filter: blur(5px);
-  transform: translateX(-100%);
+  transform: translateX(-50%);
 }
-.show {
+.hidden.place-left {
+  transform: translateX(50%);
+}
+.show,
+.show.place-left {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
 }
+
 @media screen and (width >= 1130px) {
   .nav-check {
     display: none;
