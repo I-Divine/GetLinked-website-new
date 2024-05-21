@@ -67,7 +67,11 @@ export default TimelineSection;
 function TimelineComponent({ heading, number, date, content }) {
   return (
     <div className="timeline">
-      <div className={number % 2 === 0 ? "time-content right" : "time-content"}>
+      <div
+        className={
+          number % 2 === 0 ? "time-content right" : "time-content left"
+        }
+      >
         <h2 className="heading accent-1" style={{ lineHeight: "1.25rem" }}>
           {heading}
         </h2>
@@ -77,15 +81,15 @@ function TimelineComponent({ heading, number, date, content }) {
         <div className="fancy-line"></div>
         <div className="timeline-number">{number}</div>
       </div>
-      <div
+      <p
         className={
           number % 2 === 0
             ? "heading accent-1 date left"
-            : "heading accent-1 date"
+            : "heading accent-1 date right"
         }
       >
         {date}
-      </div>
+      </p>
     </div>
   );
 }

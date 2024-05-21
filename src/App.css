@@ -269,6 +269,15 @@ body {
   grid-column: 1/2;
   grid-row: 1/2;
 }
+.right *,
+.right {
+  text-align: left;
+}
+
+.left *,
+.left {
+  text-align: right;
+}
 .timeline .heading {
   font-size: var(--fs-large);
 }
@@ -382,9 +391,9 @@ option {
 }
 .hidden {
   opacity: 0.01;
-  transition: all 1s ease-out;
+  transition: all 500ms ease-out;
   filter: blur(5px);
-  transform: translateX(-50%);
+  transform: translateX(-30%);
 }
 .hidden.place-left {
   transform: translateX(50%);
