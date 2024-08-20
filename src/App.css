@@ -395,11 +395,13 @@ option {
   filter: blur(5px);
   transform: translateX(-30%);
 }
-.hidden.place-left {
+.hidden.place-left,
+.hidden.left-side {
   transform: translateX(50%);
 }
 .show,
-.show.place-left {
+.show.place-left,
+.show.left-side {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);

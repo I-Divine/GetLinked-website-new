@@ -1,3 +1,5 @@
+import { useIsShown } from "./useShown";
+
 const TimelineSection = () => {
   return (
     <>
@@ -65,12 +67,16 @@ const TimelineSection = () => {
 export default TimelineSection;
 
 function TimelineComponent({ heading, number, date, content }) {
+  const { isShown, ref } = useIsShown();
   return (
     <div className="timeline">
       <div
-        className={
-          number % 2 === 0 ? "time-content right" : "time-content left"
-        }
+        ref={ref}
+        className={`hidden ${isShown ? "show" : ""} ${
+          number % 2 === 0
+            ? "time-content right"
+            : "time-content left left-side"
+        }`}
       >
         <h2 className="heading accent-1" style={{ lineHeight: "1.25rem" }}>
           {heading}

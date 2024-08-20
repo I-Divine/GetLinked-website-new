@@ -1,8 +1,11 @@
+import { useIsShown } from "./useShown";
+
 const PolicySection = () => {
+  const { isShown, ref } = useIsShown();
   return (
     <>
       <section className="policy grid-container section-pad">
-        <div>
+        <div ref={ref} className={`hidden ${isShown ? "show" : ""}`}>
           <h2 className="heading">Privacy Policy and</h2>
           <h2 className="heading accent-2">Terms</h2>
           <p className="paragraph" style={{ fontSize: "var(--fs-small)" }}>
